@@ -75,3 +75,5 @@ st.markdown("""
         <p style='color:#888;'>🎯 계속해서 당신만의 길을 탐색하세요 💼🚀</p>
     </div>
 """, unsafe_allow_html=True)
+
+# BGM 또는 배경 효과는 Streamlit에서 기본 지원되지 않으므로 제외
