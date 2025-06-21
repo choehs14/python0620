@@ -7,8 +7,8 @@ st.set_page_config(page_title="MBTI 직업 추천 💼✨", page_icon="🧩", la
 # 제목 및 설명
 st.markdown("""
     <div style='text-align: center;'>
-        <h1 style='font-size: 3.5em; color: #FF69B4;'>🎀 중학생을 위한 MBTI 직업 추천기 🎀</h1>
-        <p style='font-size: 1.2em; color: #888;'>나의 성격에 딱 맞는 직업은 뭘까? 재미있고 귀엽게 찾아보자! 🧁🎈</p>
+        <h1 style='font-size: 3.5em; color: #FF69B4;'>🎀 MBTI 직업 추천기 🎀</h1>
+        <p style='font-size: 1.2em; color: #888;'>나의 성격에 딱 맞는 직업은 뭘까?🧁🎈</p>
     </div>
 """, unsafe_allow_html=True)
 
