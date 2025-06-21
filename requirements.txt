@@ -4,3 +4,6 @@ streamlit
 pandas
 plotly
 yfinance
+
+streamlit_folium
+fastkml
