@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import random
+import os  # 파일 존재 여부 확인을 위해 추가
 
 # 직업 추천 데이터 (예시)
 mbti_careers = {
@@ -57,9 +58,11 @@ col1, col2 = st.columns([1, 2])
 with col1:
     st.markdown(f"<h2 style='color: #9370DB;'>💖 당신의 MBTI는 <span style='color:#FF1493;'>{selected_mbti}</span>입니다!</h2>", unsafe_allow_html=True)
     image_path = mbti_images.get(selected_mbti, None)
-    if image_path:
+    if image_path and os.path.exists(image_path):
         image = Image.open(image_path)
         st.image(image, caption=f"{selected_mbti} 타입 🧬", use_column_width=True)
+    else:
+        st.warning("⚠️ 해당 MBTI의 이미지를 찾을 수 없습니다. 이미지 파일 경로를 확인하세요.")
 
 with col2:
     st.markdown("<h3 style='color:#FF8C00;'>✨ 추천 직업 리스트 ✨</h3>", unsafe_allow_html=True)
@@ -75,5 +78,3 @@ st.markdown("""
         <p style='color:#888;'>🎯 계속해서 당신만의 길을 탐색하세요 💼🚀</p>
     </div>
 """, unsafe_allow_html=True)
-
-# BGM 또는 배경 효과는 Streamlit에서 기본 지원되지 않으므로 제외
