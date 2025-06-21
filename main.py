@@ -7,8 +7,8 @@ st.set_page_config(page_title="MBTI 직업 추천 💼✨", page_icon="🧩", la
 # 제목 및 설명
 st.markdown("""
     <div style='text-align: center;'>
-        <h1 style='font-size: 3.5em; color: #FF69B4;'>🎀 MBTI 직업 추천기 🎀</h1>
-        <p style='font-size: 1.2em; color: #888;'>나의 성격에 딱 맞는 직업은 뭘까?🧁🎈</p>
+        <h1 style='font-size: 3.5em; color: #8B5CF6;'>🎀 중학생을 위한 MBTI 직업 추천기 🎀</h1>
+        <p style='font-size: 1.2em; color: #666;'>나의 성격에 딱 맞는 직업은 뭘까? 재미있고 귀엽게 찾아보자! 🧁🎈</p>
     </div>
 """, unsafe_allow_html=True)
 
@@ -24,8 +24,8 @@ mbti_career_map = {
 
 # 사용자 MBTI 선택 인터페이스
 st.markdown("""
-    <div style='margin-top: 30px; padding: 20px; background-color: #FAF0FF; border-radius: 15px;'>
-        <h3 style='color: #DA70D6;'>📌 아래에서 나의 MBTI를 골라주세요!</h3>
+    <div style='margin-top: 30px; padding: 20px; background-color: #EDE9FE; border-radius: 15px;'>
+        <h3 style='color: #7C3AED;'>📌 아래에서 나의 MBTI를 골라주세요!</h3>
 """, unsafe_allow_html=True)
 
 mbti_options = list(mbti_career_map.keys())
@@ -38,9 +38,9 @@ st.markdown("""
 # MBTI에 따라 추천 직업 표시
 if selected_mbti:
     st.markdown(f"""
-        <div style='background-color: #FFF0F5; padding: 30px; border-radius: 15px; margin-top: 30px;'>
-            <h2 style='color: #FF1493;'>💖 {selected_mbti} 유형에게 어울리는 직업들 💖</h2>
-            <ul style='font-size: 1.3em; color: #6A5ACD;'>
+        <div style='background-color: #F3F4F6; padding: 30px; border-radius: 15px; margin-top: 30px;'>
+            <h2 style='color: #4B5563;'>💖 {selected_mbti} 유형에게 어울리는 직업들 💖</h2>
+            <ul style='font-size: 1.3em; color: #374151;'>
     """, unsafe_allow_html=True)
 
     for job in mbti_career_map[selected_mbti]:
@@ -55,7 +55,7 @@ if selected_mbti:
 st.markdown("""
     <div style='text-align: center; margin-top: 50px;'>
         <img src='https://media.giphy.com/media/xT0GqeSlGSRQut4Zuo/giphy.gif' width='200'>
-        <h4 style='color:#FF69B4;'>🌈 꿈을 향해 한 걸음씩 나아가 볼까요? ✨</h4>
-        <p style='color:#888;'>모든 MBTI는 멋진 미래를 만들어갈 수 있어요! 🚀</p>
+        <h4 style='color:#8B5CF6;'>🌈 꿈을 향해 한 걸음씩 나아가 볼까요? ✨</h4>
+        <p style='color:#666;'>모든 MBTI는 멋진 미래를 만들어갈 수 있어요! 🚀</p>
     </div>
 """, unsafe_allow_html=True)
