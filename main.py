@@ -55,7 +55,7 @@ selected_mbti = st.sidebar.selectbox("🔍 MBTI를 선택하세요:", list(mbti_
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.markdown(f"<h2 style='color: #9370DB;'>💖 당신은 <span style='color:#FF1493;'>{selected_mbti}</span>!</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='color: #9370DB;'>💖 당신의 MBTI는 <span style='color:#FF1493;'>{selected_mbti}</span>입니다!</h2>", unsafe_allow_html=True)
     image_path = mbti_images.get(selected_mbti, None)
     if image_path:
         image = Image.open(image_path)
