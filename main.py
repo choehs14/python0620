@@ -22,27 +22,34 @@ mbti_career_map = {
     "ENFP": ["🎨 디자이너", "🎤 방송인", "📝 기자", "🎈 놀이공원 기획자", "🌟 크리에이터"]
 }
 
-# 사이드바
-st.sidebar.markdown("""
-    <h3 style='color: #FFB6C1;'>💡 MBTI를 선택하세요!</h3>
+# 사용자 MBTI 선택 인터페이스
+st.markdown("""
+    <div style='margin-top: 30px; padding: 20px; background-color: #FAF0FF; border-radius: 15px;'>
+        <h3 style='color: #DA70D6;'>📌 아래에서 나의 MBTI를 골라주세요!</h3>
 """, unsafe_allow_html=True)
+
 mbti_options = list(mbti_career_map.keys())
-selected_mbti = st.sidebar.selectbox("🧩 나의 MBTI는?", mbti_options)
-
-# 추천 결과 출력
-st.markdown(f"""
-    <div style='background-color: #FFF0F5; padding: 30px; border-radius: 15px; margin-top: 30px;'>
-        <h2 style='color: #FF1493;'>💖 {selected_mbti} 유형에게 어울리는 직업들 💖</h2>
-        <ul style='font-size: 1.3em; color: #6A5ACD;'>
-""", unsafe_allow_html=True)
-
-for job in mbti_career_map[selected_mbti]:
-    st.markdown(f"<li>🌟 {job}</li>", unsafe_allow_html=True)
+selected_mbti = st.selectbox("🔍 MBTI를 선택하세요:", mbti_options)
 
 st.markdown("""
-        </ul>
     </div>
 """, unsafe_allow_html=True)
+
+# MBTI에 따라 추천 직업 표시
+if selected_mbti:
+    st.markdown(f"""
+        <div style='background-color: #FFF0F5; padding: 30px; border-radius: 15px; margin-top: 30px;'>
+            <h2 style='color: #FF1493;'>💖 {selected_mbti} 유형에게 어울리는 직업들 💖</h2>
+            <ul style='font-size: 1.3em; color: #6A5ACD;'>
+    """, unsafe_allow_html=True)
+
+    for job in mbti_career_map[selected_mbti]:
+        st.markdown(f"<li>🌟 {job}</li>", unsafe_allow_html=True)
+
+    st.markdown("""
+            </ul>
+        </div>
+    """, unsafe_allow_html=True)
 
 # 하단 인사말
 st.markdown("""
